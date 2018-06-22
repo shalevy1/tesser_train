@@ -42,8 +42,12 @@ class MultiPageTif(object):
         # Font used when "writing" the text into the tif
         self.fontsize = fontsize
         self.true_type_list = list()
+        print("***** ttf files used *****")
         for ttf_file in ttf_file_list:
-            self.true_type_list.append(ImageFont.truetype(ttf_file, fontsize))
+            ttf = ImageFont.truetype(ttf_file, fontsize)
+            print(" ".join(ttf.getname()))
+            self.true_type_list.append(ttf)
+
         # Name of the font, used for generating the file prefix
         self.font_name = font_name
 
