@@ -1,0 +1,3 @@
+dependency:imagemagick
+           tesseract
+           libtiff
